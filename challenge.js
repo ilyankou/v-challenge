@@ -1,5 +1,5 @@
 /**
- * Vinolygics Challenge
+ * Vinolytics Challenge
  * Tools: JavaScript + jQuery for getJSON() and post() functions
  * Author: Ilya Ilyankou
  * Email: ilya.ilyankou@trincoll.edu, ilyankou@gmail.com
@@ -35,7 +35,7 @@ $.getJSON(domain + 'wines?project=' + projectID, function(data) {
   var maxVintage = 0;
   var sumPrices = 0;
 
-  var years = {}; // object where keys are years, and values are number of wine bottles to be consumed
+  var years = {}; // object where keys are years, and values are numbers of bottles available for consumption
 
   for (i in wines) {
     // Sum up all prices to figure out price for the average bottle
@@ -83,7 +83,7 @@ $.getJSON(domain + 'wines?project=' + projectID, function(data) {
   // Submit solution
   $.post(domain + 'submit', result)
     .done(function(data) {
-      console.log(data)
+      console.log(data);
     });
 
 });
